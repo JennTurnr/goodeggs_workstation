@@ -34,11 +34,18 @@ node_attributes:
 
 EOF
 
+if [[ -d dmg ]]; then
+  cd dmg && git pull && cd ..
+else
+  git clone https://github.com/opscode-cookbooks/dmg.git
+fi
+
 if [[ -d pivotal_workstation ]]; then
   cd pivotal_workstation && git pull && cd ..
 else
   git clone https://github.com/pivotal/pivotal_workstation.git
 fi
+
 if [[ -d goodeggs_workstation ]]; then
   cd goodeggs_workstation && git pull && cd ..
 else
