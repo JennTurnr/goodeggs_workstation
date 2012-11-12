@@ -24,11 +24,13 @@ node_attributes:
       v0.8.14: {}
     default_node: v0.8.14
   git_pairs_authors: [
+    {initials: "ah", name: "Adam Hull", shortname: "adam"},
+    {initials: "ag", name: "Alex Gorbatchev", shortname: "alex"},
     {initials: "as", name: "Alon Salant", shortname: "alon"},
     {initials: "bz", name: "Bob Zoller", shortname: "bob"},
-    {initials: "rp", name: "Randy Puro", shortname: "randy"},
-    {initials: "ah", name: "Adam Hull", shortname: "adam"},
-    {initials: "bn", name: "Brian Ng", shortname: "brian"}]
+    {initials: "bn", name: "Brian Ng", shortname: "brian"},
+    {initials: "rp", name: "Randy Puro", shortname: "randy"}
+  ]
 
 EOF
 
