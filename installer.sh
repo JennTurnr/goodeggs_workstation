@@ -21,8 +21,8 @@ node_attributes:
     default_ruby: ruby-1.9.3-p194
   nvm:
     nodes:
-      v0.8.11: {}
-    default_node: v0.8.11
+      v0.8.14: {}
+    default_node: v0.8.14
   git_pairs_authors: [
     {initials: "as", name: "Alon Salant", shortname: "alon"},
     {initials: "bz", name: "Bob Zoller", shortname: "bob"},
