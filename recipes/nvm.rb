@@ -3,7 +3,7 @@ include_recipe "pivotal_workstation::git"
 ::NVM_HOME = "#{WS_HOME}/.nvm"
 ::NVM_COMMAND = "source #{::NVM_HOME}/nvm.sh; nvm"
 
-pivotal_workstation_bash_profile_include("nvm")
+pivotal_workstation_bash_it_custom_plugin("nvm.bash")
 
 unless system("which nvm")
   directory NVM_HOME do

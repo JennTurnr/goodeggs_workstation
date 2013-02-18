@@ -1,6 +1,5 @@
 # subset of pivotal_workstation::meta_osx_development
 include_recipe "pivotal_workstation::workspace_directory"
-include_recipe "pivotal_workstation::bash_profile-git_completion"
 include_recipe "pivotal_workstation::git_config_global_defaults"
 include_recipe "pivotal_workstation::git"
 include_recipe "pivotal_workstation::global_environment_variables"
