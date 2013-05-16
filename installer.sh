@@ -43,6 +43,12 @@ else
   git clone https://github.com/opscode-cookbooks/dmg.git
 fi
 
+if [[ -d homebrew ]]; then
+  cd homebrew && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/homebrew.git
+fi
+
 if [[ -d pivotal_workstation ]]; then
   cd pivotal_workstation && git pull && cd ..
 else
