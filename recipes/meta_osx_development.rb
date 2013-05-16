@@ -8,7 +8,6 @@ include_recipe "pivotal_workstation::virtualbox"
 # extra pivotal stuff we want
 include_recipe "pivotal_workstation::qt"
 include_recipe "pivotal_workstation::mongodb"
-include_recipe "pivotal_workstation::redis"
 include_recipe "pivotal_workstation::ec2_api_tools"
 
 # our extras
