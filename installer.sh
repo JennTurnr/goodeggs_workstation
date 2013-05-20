@@ -43,11 +43,30 @@ else
   git clone https://github.com/opscode-cookbooks/dmg.git
 fi
 
-if [[ -d homebrew ]]; then
-  cd homebrew && git pull && cd ..
-else
+if [[ ! -d homebrew ]]; then
   git clone git://github.com/opscode-cookbooks/homebrew.git
 fi
+
+cd homebrew
+git checkout .
+git pull
+git apply <<EOF
+diff --git a/libraries/homebrew_package.rb b/libraries/homebrew_package.rb
+index 2d5953d..8105cd7 100644
+--- a/libraries/homebrew_package.rb
++++ b/libraries/homebrew_package.rb
+@@ -40,7 +40,7 @@ class Chef
+ 
+         protected
+         def brew(*args)
+-          get_response_from_command("brew #{args.join(' ')}")
++          get_response_from_command("su #{node['current_user']} -c 'brew #{args.join(' ')}'")
+         end
+ 
+         def current_installed_version
+
+EOF
+cd ..
 
 if [[ -d pivotal_workstation ]]; then
   cd pivotal_workstation && git pull && cd ..
